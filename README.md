@@ -28,16 +28,16 @@ Watchers are durable within the session, disarmable on demand, and torn down aut
 > `pnpm <args...>` in the profile directory, then adds any installed package
 > that declares `dsh.bundle` to the profile's layer stack automatically.
 
-### From git (works today)
-
-```bash
-npx @deepseek-ai/dsh@latest plugin --profile web add https://github.com/AbnerAI/dsh-monitor
-```
-
-### From npm (once published)
+### From npm
 
 ```bash
 npx @deepseek-ai/dsh@latest plugin --profile web add dsh-monitor
+```
+
+### From git
+
+```bash
+npx @deepseek-ai/dsh@latest plugin --profile web add https://github.com/AbnerAI/dsh-monitor
 ```
 
 ### From a local directory
