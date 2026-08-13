@@ -1,0 +1,8 @@
+# dsh-monitor bundle patch: mount the monitor tools as one row in the
+# composition. To enable in a profile, either:
+#   dsh plugin --profile <name> add dsh-monitor
+# or add "dsh-monitor" to the profile's dsh.profile.bundles and include this
+# file via the package's dsh.bundle.patch declaration.
+- insert:
+    - id: dsh-monitor
+      name: 'dsh-monitor'

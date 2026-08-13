@@ -1,0 +1,10 @@
+# dependencies
+node_modules/
+
+# pnpm workspace / lockfile (published artifact installs via npm from package.json)
+pnpm-lock.yaml
+pnpm-workspace.yaml
+
+# OS / editor
+.DS_Store
+*.log
