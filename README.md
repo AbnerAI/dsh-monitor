@@ -24,21 +24,35 @@ Watchers are durable within the session, disarmable on demand, and torn down aut
 
 ## Installation
 
-### From npm
+> `dsh plugin --profile <name> <args...>` is a thin pnpm forwarder: it runs
+> `pnpm <args...>` in the profile directory, then adds any installed package
+> that declares `dsh.bundle` to the profile's layer stack automatically.
+
+### From git (works today)
 
 ```bash
-npx @deepseek-ai/dsh@latest plugin --profile <name> add dsh-monitor
+npx @deepseek-ai/dsh@latest plugin --profile web add https://github.com/AbnerAI/dsh-monitor
 ```
 
-Alternatively, add `dsh-monitor` to the profile's `dsh.profile.bundles` and include this package's `cordis.patch.yml` via its `dsh.bundle.patch` declaration.
-
-### From a git repo / tarball / local directory
+### From npm (once published)
 
 ```bash
-npx @deepseek-ai/dsh@latest plugin --profile web add <repo-or-path>
+npx @deepseek-ai/dsh@latest plugin --profile web add dsh-monitor
 ```
 
-> When installing a local directory via pnpm, run `pnpm install` inside the package first — `link:` installs do not resolve the package's own dependencies automatically.
+### From a local directory
+
+```bash
+npx @deepseek-ai/dsh@latest plugin --profile web add /path/to/dsh-monitor
+```
+
+> When installing a local directory, run `pnpm install` inside the package
+> first — `link:` installs do not resolve the package's own dependencies
+> automatically.
+
+Manual alternative: add `dsh-monitor` to the profile's `dsh.profile.bundles`
+and include this package's `cordis.patch.yml` via its `dsh.bundle.patch`
+declaration.
 
 ## Quick start
 

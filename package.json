@@ -32,6 +32,15 @@
       "patch": "./cordis.patch.yml"
     }
   },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "monitor",
+    "plugin",
+    "notification",
+    "claude-code"
+  ],
   "dependencies": {
     "@deepseek-ai/schemastery": "^3.18.1",
     "zod": "^4.4.3"
